@@ -1,0 +1,18 @@
+$color: blue;
+
+body {
+  background-color: $color;
+  border-color: $color;
+  div {     // all div descendants of body
+    border-color: black;
+    li {
+      color: mix($color, black, 50%)
+    }
+  }
+  > div {  // this makes it a direct decendant of body
+    border-color: white;
+    > li {
+      color: mix($color, white, 40%)
+    }
+  }
+}
